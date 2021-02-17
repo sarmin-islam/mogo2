@@ -1,0 +1,1283 @@
+/*table of contant*/
+/*
+1.common css
+2.space css
+3.heading css
+4.menu css
+5.baner css
+6.story css
+7.funfact css
+8.service css
+9.devices css
+10.service2 css
+11.messages1 css
+12.team css 
+13.pic css
+14.work css
+15.messages2
+16.clients css
+17.stories css
+18.map css
+19.back-to-up
+*/
+:root{
+    --primarycloor:#f38181;
+    --primarycloor2:#fce38a;
+    --headingfont:'Montserrat', sans-serif;
+    --subheadingfont:'Kaushan Script', cursive;
+    --paragraphfont:'Roboto', sans-serif;
+    --cw:#ffff;
+    --cb:#3333;
+     --cp:#999;
+    --ci:#95e1d3;
+}
+/*common css starts*/
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.clr{
+    clear: both;
+}
+.full-warpper{
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*common css ends*/
+/*space css starts*/
+.m-30{
+    margin: 0 30px;
+}
+img{
+    vertical-align: middle;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.d-none{
+    display: none;
+}
+.pb{
+    padding-bottom: 30px;
+}
+.pt{
+    padding-top: 30px;
+}
+.pl{
+    padding-left: 30px;
+}
+.pl2{
+    margin-right: 50px;
+}
+/*space css ends*/
+/*heading css starts*/
+
+.heading{
+    text-align: center;
+
+}
+.heading h4{
+    font-family: var(--subheadingfont);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--cb);
+    margin-bottom: 8px;
+}
+.heading h3{
+    font-family: var(--headingfont);
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--cb);
+    text-transform: uppercase;
+    position: relative;
+    padding-top: 6px;
+}
+.heading h3::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycloor);
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    margin-bottom: -100px;
+    transform: translateX(-50%);
+}
+.heading p{
+    font-family: var(--paragraphfont);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--cp);
+    margin-top: 60px;
+}
+.overlay{
+    position: absolute;
+    top: -100%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.753);
+    text-align: center;
+    color: #ffff;
+    transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+/*heading ends*/
+/*menu starts*/
+.menu-bg{
+    position: absolute;
+    top: 28px;
+    left: 0;
+    z-index: 999;
+}
+.fixed-nav{
+    position: fixed;
+    top:0;
+    right: 0; 
+    z-index: 999;
+     background: rgb(230, 187, 219);
+     transition: all linear 0.3s;
+     animation: smothly 1s linear;
+}
+@keyframes smothly{
+    0%{
+       top:-100px;
+    }
+    100%{
+        top:0;
+    }
+}
+.menu-bg .menu{
+
+}
+.menu-bg .menu .logo{
+    float: left;
+    width: 100px;
+}
+.menu-bg .menu .list{
+    float: left;
+    width: 1100px;
+}
+.menu-bg .menu .list ul{
+    float: right;
+}
+.menu-bg .menu .list ul li{
+    float: left;
+}
+.menu-bg .menu .list ul li a{
+    font-family: var(--headingfont) ;
+    font-weight: 400;
+    font-size: 14px;
+    color:var( --cw) ;
+    text-transform: uppercase;
+    margin: 0 29px;
+    position: relative;
+}
+.menu-bg .menu .list ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:var(--primarycloor2) ;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+}
+.menu-bg .menu .list ul li:hover a::after{
+    width: 100%;
+}
+.menu-bg .menu .list ul li:hover a{
+    color: var(--primarycloor2);
+}
+.menu-bg .menu .list ul li:last-child a{
+    padding-right: 0;
+}
+.menu-bg .menu .list ul li .active{
+    color:var(--primarycloor2) ;
+}
+.menu-bg .menu .list ul li .active::after{
+    width: 100%;
+}
+/*menu ends*/
+/*baner starts*/
+.baner-bg{
+    padding-top: 200px;
+    padding-bottom: 230px;
+    background: url(../images/baner.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+.baner-bg::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.753);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.baner-bg .baner{
+  text-align: center; 
+  color: #ffff; 
+}
+.baner-bg .baner h4{
+    font-family:var( --subheadingfont) ;
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.baner-bg .baner h1{
+    font-family:var(  --headingfont) ;
+    font-size: 90px;
+    font-weight: 400;
+    text-transform:uppercase;
+    padding: 0 10px;
+    padding-top: 15px;
+}
+.baner-bg .baner a{
+    font-family:var(  --headingfont) ;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform:uppercase;
+    color: #ffff;
+    display: inline-block;
+    border: 3px solid #ffff;
+    padding: 0 30px;
+    line-height: 34px;
+    position: relative;
+    margin-top: 70px;
+}
+.baner-bg .baner a::before{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background:var(--primarycloor2) ;
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    transform: translate(-50%);
+}
+.baner-bg .baner ul{
+    position: absolute;
+    left: 50%;
+    bottom: 92px;
+    transform: translate(-50%);
+}
+.baner-bg .baner ul li{
+    width: 20px;
+    height: 20px;
+    background: #ffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    float: left;
+}
+.baner-bg .baner ul .active{
+    background: #ff2828;
+}
+/*baner ends*/
+/*story starts*/
+.story-bg{
+   padding-top: 90px; 
+   padding-bottom: 110px;
+}
+
+.story-bg .story .story-content{
+   padding-top: 100px; 
+}
+.story-bg .story .story-content .story-iteam{
+    width: 300px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+   
+}
+.story-bg .story .story-content .story-iteam:hover img{
+    box-shadow:5px 3px 1px 1px #95e1d3;
+}
+
+.story-bg .story .story-content .story-iteam img{
+    width: 100%;
+}
+.story-bg .story .story-content .story-iteam:hover .overlay{
+    top: 0;
+}
+.story-bg .story .story-content .story-iteam:hover .overlay i{
+    margin-top: 90px;
+}
+.story-bg .story .story-content .story-iteam:hover .overlay p{
+    font-family:var(--headingfont) ;
+    font-size: 18px;
+    font-weight:700 ;
+    text-transform: uppercase;
+}
+/*story ends*/
+/*funfact starts*/
+.funfact-bg{
+    background: #95e1d3;
+    padding-top: 85px;
+    padding-bottom: 90px;
+}
+.funfact-bg .funfact .fun-iteam{
+   width: 216px; 
+   float: left;
+   text-align: center;
+}
+.funfact-bg .funfact .fun-iteam h4{
+    font-family:var(  --headingfont) ;
+    font-size: 72px;
+    font-weight: 700;
+  }
+  .funfact-bg .funfact .fun-iteam p{
+    font-family:var(  --headingfont) ;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+/*funfact ends*/
+/*service starts*/
+.service-bg{
+   padding-top: 80px;
+   padding-bottom: 120px;
+}
+.service-bg .service .service-iteam1{
+    position: relative;
+    padding-top: 60px;
+    
+}
+.service-bg .service .service-iteam1::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #992a2a;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+}
+.service-bg .service .service-iteam1 .service-content{
+    width: 380px;
+   float: left;
+}
+.service-bg .service .service-iteam1 .service-content i{
+    font-size: 55px;
+    color: var(--ci);
+}
+.service-bg .service .service-iteam1 .service-content h6{
+    margin-left: 90px;
+    margin-top: -50px;
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color: var(--cb);
+    text-transform: uppercase;
+} 
+.service-bg .service .service-iteam1 .service-content p{
+    margin-left: 90px;
+    margin-top: -50px;
+    font-family:var(--paragraphfont);
+    font-size: 400;
+    font-size: 15px;
+    color: var(--cp);
+    margin-top: 15px;
+    line-height: 24px;
+} 
+.service-bg .service .service-iteam2{
+    padding-top: 100px;
+    
+}
+.service-bg .service .service-iteam2 .service-content2{
+    width: 380px;
+   float: left;
+}
+.service-bg .service .service-iteam2 .service-content2 i{
+    font-size: 55px;
+    color: var(--ci);
+}
+.service-bg .service .service-iteam2 .service-content2 h6{
+    margin-left: 90px;
+    margin-top: -50px;
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color: var(--cb);
+    text-transform: uppercase;
+} 
+.service-bg .service .service-iteam2 .service-content2 p{
+    margin-left: 90px;
+    margin-top: -50px;
+    font-family:var(--paragraphfont);
+    font-size: 400;
+    font-size: 15px;
+    color: var(--cp);
+    margin-top: 15px;
+    line-height: 24px;
+} 
+/*service ends*/
+.devices-bg{
+    background: url(../images/design-p-1.jpg) no-repeat center / cover;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+.devices-bg::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 253, 253, 0.35);
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+.devices-bg .devices .heading h4{
+    text-transform: capitalize;
+}
+.devices-bg .devices .heading h3{
+    margin-bottom: 65px;
+}
+.devices-bg .devices .devices-content{
+    
+    text-align: center;
+}
+.devices-bg .devices .devices-content .image1{
+    position: relative;
+}
+.devices-bg .devices .devices-content .image1{
+    position: relative;
+}
+.devices-bg .devices .devices-content .image2{
+    position: absolute;
+    top: 55%;
+    right: 31%;
+    animation:animate 2s linear;
+    animation-fill-mode: backwards;
+}
+@keyframes animate{
+    from{
+        top:55%;
+    }
+    to{
+        top: 75%;
+    }
+   
+}
+/*device starts*/
+/*service2 starts*/
+.service2-bg{
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.service2-bg .service2 .service2-content{
+    padding-top: 95px;
+}
+.service2-bg .service2 .service2-content .service2-image{
+    width: 580px;
+    float: left;
+}
+.service2-bg .service2 .service2-content .service2-image img{
+    width: 100%;
+}
+.service2-bg .service2 .service2-content .service2-collaspa{
+    width: 590px;
+    float: left;
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam{
+    margin-bottom: 10px;
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam h6{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color: var(--cp);
+    text-transform: uppercase;
+    padding: 10px;
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam .header{
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam .header h6 i{
+    width: 30px;
+    height: 30px; 
+    color: var(--ci);
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam .header h6 a{
+    float:right;
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam .body {
+    border:1px solid #999;
+    box-sizing: border-box;
+    padding:16px;
+    border-top: none;
+}
+.service2-bg .service2 .service2-content .service2-collaspa .iteam .body p{
+    font-family:var(--paragraphfont);
+    font-weight: 300;
+    color: var(--cb);
+    line-height: 24px;
+    font-style: italic;
+}
+/*service2 ends*/
+/*messages1 starts*/
+.messages1-bg{
+    background: #f8f8f8;
+    padding-top:  70px;
+    padding-bottom: 70px;
+}
+.messages1-bg .messages1 .content{
+
+}
+.messages1-bg .messages1 .content .iteam{
+    width: 150px;
+    float: left;
+}
+.messages1-bg .messages1 .content .iteam i{
+    width: 10px;
+    height: 10px; 
+    color: var(--cp);
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.messages1-bg .messages1 .content .iteam1{
+    width: 200px;
+    float: left;
+} 
+.messages1-bg .messages1 .content .iteam1 img{
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--ci);
+    padding: 30px;
+}
+.messages1-bg .messages1 .content .iteam2{
+    width: 670px;
+    float: left;
+}
+.messages1-bg .messages1 .content .iteam2 p{
+    font-family:var(--paragraphfont);
+    font-weight: 300;
+    color: var(--cp);
+    font-size: 24px;
+    line-height: 24px;
+    font-style: italic;
+}
+.messages1-bg .messages1 .content .iteam2 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:rgb(10, 9, 9);
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 70px;
+}
+.messages1-bg .messages1 .content .iteam2 h4::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycloor);
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.messages1-bg .messages1 .content .iteam3{
+    width: 150px;
+    float: left;
+}
+.messages1-bg .messages1 .content .iteam3 i{
+    width: 10px;
+    height: 10px; 
+    color: var(--cp);
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+/*messages1 ends*/
+/*team starts*/
+.team-bg{
+    padding-top: 75px;
+    padding-bottom: 110px;
+}
+.team-bg .team .content{
+    padding-top: 95px;
+  
+}
+
+.team-bg .team .content .iteam1{
+    width: 380px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.team-bg .team .content .name1{
+    width: 380px;
+    float: left;
+}
+.team-bg .team .content .name1 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+.team-bg .team .content .name1 h6{
+    font-family: var(--subheadingfont);
+    font-size: 400;
+    font-size: 12px;
+    color:var(--cb);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.team-bg .team .content .iteam1:hover .overlay{
+    top: 0;
+    right: 0;
+} 
+.team-bg .team .content .iteam1 .overlay ul{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,50%);
+}
+.team-bg .team .content .iteam1 .overlay ul li{
+    float: left;
+}
+.team-bg .team .content .iteam1 .overlay ul li a{
+    width: 60px;
+    height: 60px;
+    background: var( --primarycloor2);
+    padding: 15px;
+
+}
+.team-bg .team .content .iteam1 .overlay ul li:hover i{
+    transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+}
+.team-bg .team .content .iteam1 .overlay ul li:hover i{
+    color:#ffff;
+    background:#f38181;
+}
+
+.team-bg .team .content .iteam2{
+    width: 380px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.team-bg .team .content .name2{
+    width: 380px;
+    float: left;
+}
+.team-bg .team .content .name2 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+.team-bg .team .content .name2 h6{
+    font-family: var(--subheadingfont);
+    font-size: 400;
+    font-size: 12px;
+    color:var(--cb);
+    text-transform: uppercase;
+    text-align: center;
+}
+.team-bg .team .content .iteam2:hover .overlay{
+    top: 0;
+    right: 0;
+}
+.team-bg .team .content .iteam2 .overlay ul{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,50%);
+}
+.team-bg .team .content .iteam2 .overlay ul li{
+    float: left;
+}
+.team-bg .team .content .iteam2 .overlay ul li a{
+    width: 60px;
+    height: 60px;
+    background: var( --primarycloor2);
+    padding: 15px;
+
+}
+.team-bg .team .content .iteam2 .overlay ul li:hover i{
+    transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+}
+.team-bg .team .content .iteam2 .overlay ul li:hover i{
+    color:#ffff;
+    background:#f38181;
+} 
+.team-bg .team .content .iteam3{
+    width: 380px;
+    float: left;
+    position: relative;
+    overflow:hidden;
+}
+.team-bg .team .content .name3{
+    width: 380px;
+    float: left;
+}
+.team-bg .team .content .name3 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+.team-bg .team .content .name3 h6{
+    font-family: var(--subheadingfont);
+    font-size: 400;
+    font-size: 12px;
+    color:var(--cb);
+    text-transform: uppercase;
+    text-align: center;
+}
+.team-bg .team .content .iteam3:hover .overlay{
+    top: 0;
+    right: 0;
+  
+} 
+.team-bg .team .content .iteam3 .overlay ul{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,50%);
+}
+.team-bg .team .content .iteam3 .overlay ul li{
+    float: left;
+}
+.team-bg .team .content .iteam3 .overlay ul li a{
+    width: 60px;
+    height: 60px;
+    background: var( --primarycloor2);
+    padding: 15px;
+
+}
+.team-bg .team .content .iteam3 .overlay ul li:hover i{
+    transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+}
+.team-bg .team .content .iteam3 .overlay ul li:hover i{
+    color:#ffff;
+    background:#f38181;
+}
+
+
+/*team ends*/
+/*pic starts*/
+.pic-bg{
+    background:#f8f8f8; 
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+/*pic ends*/
+/*work starts*/
+.work-bg{
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+.work-bg .content{
+    padding-top: 105px;
+}
+.work-bg .content .gallary1{
+    width: 25%;
+    float: left;
+   
+}
+.work-bg .content .gallary1 .iteam1{
+    position: relative;
+    overflow: hidden;
+}
+.work-bg .content .gallary1 .iteam1 img{
+    width: 100%;
+}
+.work-bg .content .gallary1 .iteam1:hover .overlay{
+    top: 0;
+}
+.work-bg .content .gallary1 .iteam1a{
+    position: relative;
+    overflow: hidden;
+}
+.work-bg .content .gallary1 .iteam1a img{
+    width: 100%;
+}
+.work-bg .content .gallary1 .iteam1a:hover .overlay{
+    top: 0;
+}
+.work-bg .content .gallary1 .iteam1 .overlay{
+    text-align: center;
+    padding-top: 100px;
+}
+.work-bg .content .gallary1 .iteam1 .overlay i{
+    width: 10px;
+    height: 10px; 
+    color: var(--cp);
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.work-bg .content .gallary1 .iteam1 .overlay h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.work-bg .content .gallary1 .iteam1 .overlay p{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 12px;
+    color:var(--cp);
+    text-transform: uppercase;
+}
+.work-bg .content .gallary1 .iteam1a .overlay{
+    text-align: center;
+    padding-top: 100px;
+}
+.work-bg .content .gallary1 .iteam1a .overlay i{
+    width: 10px;
+    height: 10px; 
+    color: var(--cp);
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.work-bg .content .gallary1 .iteam1a .overlay h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.work-bg .content .gallary1 .iteam1a .overlay p{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 12px;
+    color:var(--cp);
+    text-transform: uppercase;
+}
+/*work endss*/
+/*messages2 starts*/
+.messages2-bg{
+    background: #f8f8f8;
+    padding-top:  70px;
+    padding-bottom: 70px;
+}
+.messages2-bg .messages2 .content{
+
+}
+.messages2-bg .messages2 .content .iteam{
+    width: 150px;
+    float: left;
+}
+.messages2-bg .messages2 .content .iteam i{
+    width: 10px;
+    height: 10px; 
+    color: var(--cp);
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.messages2-bg .messages2 .content .iteam1{
+    width: 200px;
+    float: left;
+    margin-top:-50px;
+} 
+.messages2-bg .messages2 .content .iteam1 img{
+    width: 100%;
+   
+}
+.messages2-bg .messages2 .content .iteam2{
+    width: 670px;
+    float: left;
+}
+.messages2-bg .messages2 .content .iteam2 p{
+    font-family:var(--paragraphfont);
+    font-weight: 300;
+    color: var(--cp);
+    font-size: 24px;
+    line-height: 24px;
+    font-style: italic;
+}
+.messages2-bg .messages2 .content .iteam2 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:rgb(10, 9, 9);
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 70px;
+}
+.messages2-bg .messages2 .content .iteam2 h4::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycloor);
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.messages2-bg .messages2 .content .iteam3{
+    width: 150px;
+    float: left;
+}
+.messages2-bg .messages2 .content .iteam3 i{
+    width: 10px;
+    height: 10px; 
+    color: var(--cp);
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+/*messages1 ends*/
+/*clients starts*/
+.clients-bg{
+    background: url(../images/bi.jpg) no-repeat center / cover;
+    padding-bottom: 110px;
+}
+.clients-bg .clients .heading{
+    padding-top: 80px;
+}
+.clients-bg .clients  .content{
+    padding-top: 100px;
+    float: left;
+}
+.clients-bg .clients  .content .gallary2{
+    padding-top:50px;
+
+}
+
+.clients-bg .clients  .content .gallary1 .iteam1{
+    width: 130px;
+    float: left;
+}
+.clients-bg .clients  .content .gallary1 .iteam2{
+    width: 450px;
+}
+.clients-bg .clients  .content .gallary1 .iteam2 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+}
+.clients-bg .clients  .content .gallary1 .iteam2 h6{
+    font-family: var(--headingfont);
+    font-size: 300;
+    font-size: 12px;
+    color:var(--cb);
+    text-transform: uppercase;
+    font-style: italic;
+    padding-top: 15px;
+    position: relative;
+}
+.clients-bg .clients  .content .gallary1 .iteam2 h6::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var( --primarycloor);
+    position: absolute;
+    top:38px;
+    left:133px;
+}
+.clients-bg .clients  .content .gallary1 .iteam2 p{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cb);
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 15px;
+}
+.clients-bg .clients  .content .gallary2 .iteam1{
+    width: 130px;
+    float: left;
+}
+.clients-bg .clients  .content .gallary2 .iteam2{
+    width: 450px;
+}
+.clients-bg .clients  .content .gallary2 .iteam2 h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:var(--cp);
+    text-transform: uppercase;
+}
+.clients-bg .clients  .content .gallary2 .iteam2 h6{
+    font-family: var(--headingfont);
+    font-size: 300;
+    font-size: 12px;
+    color:var(--cb);
+    text-transform: uppercase;
+    font-style: italic;
+    position: relative;
+    padding-top: 15px;
+}
+.clients-bg .clients  .content .gallary2 .iteam2 h6::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var( --primarycloor);
+    position: absolute;
+    top:38px;
+    left:133px;
+}
+.clients-bg .clients  .content .gallary2 .iteam2 p{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cb);
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 15px;
+}
+
+/*clients endss*/
+/*stories starts*/
+.stories-bg{
+    padding-top: 100px;
+    padding-bottom: 110px;
+
+}
+.stories-bg .stories .iteam{
+    width: 380px;
+    padding-top: 50px;
+    float: left;
+}
+.stories-bg .stories .iteam img{
+   width: 90%;
+
+}
+.stories-bg .stories .iteam h5{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 12px;
+    color:var(--cp);
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.stories-bg .stories .iteam p{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cb);
+    font-size: 15px;
+    line-height: 15px;
+    padding-top: 15px;
+    position: relative;
+}
+.stories-bg .stories .iteam p::after{
+    content: '';
+    width: 370px;
+    height: 1px;
+    background: var(--cp);
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.stories-bg .stories .iteam ul{
+    margin-top: 30px;
+   
+}
+.stories-bg .stories .iteam ul li{
+    float: left;
+    padding: 0 5px;
+}
+.stories-bg .stories .iteam ul li i{
+    color: var(--ci);
+}
+
+/*stories ends*/
+/*map starts*/
+.map-bg{
+    background:url(../images/map.jpg) no-repeat center / cover ;
+    padding-bottom: 90px;
+
+}
+.map-bg .container{
+    text-align: center;
+    padding-top: 100px;
+}
+.map-bg .container i{
+    color: #ff2828;
+}
+.map-bg .container h4{
+    font-family: var(--headingfont);
+    font-size: 400;
+    font-size: 14px;
+    color:#ff2828;
+    text-transform: uppercase; 
+    position: relative;
+}
+.map-bg .container h4::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var( --primarycloor);
+    position: absolute;
+    top: 31px;
+    left: 570px;
+}
+
+/*map ends*/
+/*footer starts*/
+.footer-bg{
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+.footer-bg .footer .iteam1{
+    width: 380px;
+    float: left;
+}
+
+.footer-bg .footer .iteam1 p{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cb);
+    font-size: 15px;
+    line-height: 15px;
+    padding-top: 30px;
+}
+.footer-bg .footer .iteam1 h5{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cp);
+    font-size: 12px;
+    padding-top: 15px;
+    position: relative;
+}
+.footer-bg .footer .iteam1 h5::after{
+    content: '';
+    width: 370px;
+    height: 1px;
+    background: var( --cb);
+    position: absolute;
+    top:37px;
+    left:0px;
+}
+.footer-bg .footer .iteam1 ul{
+    padding-top: 30px;
+  
+}
+.footer-bg .footer .iteam1 ul li{
+    float: left;
+    padding: 0 10px;
+}
+.footer-bg .footer .iteam1 ul li i{
+  color: var(--ci);
+}
+.footer-bg .footer .iteam1 input{
+    width: 300px;
+    height: 30px;
+    margin-top: 35px;
+    text-align: center;
+}
+.footer-bg .footer .iteam2{
+    width: 480px;
+    float: left;
+}
+.footer-bg .footer .iteam2 h3{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cp);
+    font-size: 15px;
+    padding-left: 20px;
+}
+.footer-bg .footer .iteam2 .iteam2a{
+    width:195px ;
+    float: left;
+    padding-top: 40px;
+  
+}
+.footer-bg .footer .iteam2 .iteam2b{
+    width:205px ;
+    float: left;
+    padding-top: 40px;
+}
+.footer-bg .footer .iteam3{
+    width: 280px;
+    float: left;
+}
+.footer-bg .footer .iteam3 h4{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cp);
+    font-size: 15px;
+}
+.footer-bg .footer .iteam3 ul{
+    padding-top: 40px;
+}
+.footer-bg .footer .iteam3 ul li{
+    float: left;
+}
+
+/*footer ends*/
+/*copy starts*/
+.copy-bg{
+    padding-top: 10px;
+}
+.copy-bg .copy{
+  
+}
+
+.copy-bg .copy p{
+    font-family:var(--paragraphfont);
+    font-weight: 400;
+    color: var(--cb);
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+}
+.copy-bg .copy p::after{
+    content: '';
+    width: 500px;
+    height: 1px;
+    background: var( --cb);
+    position: absolute;
+    top:37px;
+    left:0px;
+}
+/*copy ends*/
+/*back-to-up starts*/
+.back-to-up{
+    width: 40px;
+    height: 40px;
+    background: #95e1d3;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    transition: all linear 0.4s;
+}
+.back-to-up i{
+    color: aliceblue;
+    width: 40px;
+    height: 40px;
+  
+}
+/*back-to-up ends*/
